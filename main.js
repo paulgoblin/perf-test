@@ -75,8 +75,10 @@
 
   const callApi = cb => {
     const start = performance.now();
-    return fetch('http://swapi.co/api/people/1', {
-      method: 'head'
+
+    return fetch('https://api.github.com/users', {
+      method: 'head',
+      mode: 'cors'
     }).then(() => {
       const end = performance.now();
       const time = (end - start).toString().slice(0, 5);
