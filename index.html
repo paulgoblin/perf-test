@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript performance tests</title>
+  <style>
+    .test-box {
+      display: inline-block;
+      margin: 1em;
+      padding: 1em;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <p>FYI: only works in Chrome</p>
+  <div class="test-box">
+    <div>Sum w/ for loop <span id="loopSumCount"></span></div>
+    <button id="startLoopSumButton">Start</button>
+    <div>
+      <span>Time to complete: </span>
+      <span id="loopSumResult">-</span>
+      <span>(ms)</span>
+    </div>
+  </div>
+
+  <div class="test-box">
+    <div>Sum w/ forEach <span id="sumCount"></span></div>
+    <button id="startSumButton">Start</button>
+    <div>
+      <span>Time to complete: </span>
+      <span id="sumResult">-</span>
+      <span>(ms)</span>
+    </div>
+  </div>
+
+  <div class="test-box">
+    <div>
+      Render
+      <span id="renderCount"></span>
+      <span id="countDisplay"></span>
+    </div>
+    <button id="startCountButton">Start</button>
+    <div>
+      <span>Time to complete: </span>
+      <span id="countResult">-</span>
+      <span>(ms)</span>
+    </div>
+  </div>
+
+  <div class="test-box">
+    <div>Call API</div>
+    <button id="callApiButton">Start</button>
+    <div>
+      <span>Time to complete: </span>
+      <span id="callApiResult">-</span>
+      <span>(ms)</span>
+    </div>
+  </div>
+</body>
+<script src="./main.js"></script>
+</html>
